@@ -5,13 +5,12 @@ import java.util.List;
 import java.util.Locale;
 
 import entities.Product;
-import util.ProductPredicate;
 
 public class Program {
 
 	public static void main(String[] args) {
 		
-		Locale.setDefault(Locele.US);
+		Locale.setDefault(Locale.US);
 		
 		List<Product> list = new ArrayList<>();
 		
@@ -20,7 +19,7 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		list.removeIf(new ProductPredicate());
+		list.removeIf(Product::staticProductPredicate);
 		
 		for (Product p : list) {
 			System.out.println(p);

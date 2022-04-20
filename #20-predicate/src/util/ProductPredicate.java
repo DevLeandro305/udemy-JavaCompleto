@@ -4,6 +4,8 @@ import java.util.function.Predicate;
 
 import entities.Product;
 
+//Não necessita mais dessa classe
+
 public class ProductPredicate  implements Predicate<Product>{
 
 	@Override
